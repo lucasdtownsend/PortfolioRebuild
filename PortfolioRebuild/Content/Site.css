@@ -1,0 +1,136 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #fffff0;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+h1, h2, h3, h4{
+    font-family:Consolas;
+}
+
+p.summary
+{
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+
+h4.projectname{
+    padding-left: 20px;
+    font-family:Consolas;
+}
+
+div.projectheader {
+    background-color: lavender;
+    border: solid #4d4d4d 1px;
+    border-bottom-color: lavenderblush;
+}
+
+div.projectbody{
+    background-color:lavenderblush;
+    border: solid #000000 1px;
+    border-top-color: lavender;
+}
+
+.screenshot{
+    max-height:200px; 
+    width:auto; 
+    margin:auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div.border{
+    border: solid #4d4d4d 1px;
+}
+
+p{
+    font-family:Consolas;
+}
+
+div.navspacer{
+    padding-top:50px;
+}
+
+img.school{
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left: 15px;
+    height:60px;
+    width:auto;
+}
+
+div.schoolcontainer{
+    background-color:#3d3d3d;
+    min-height:80px;
+    padding-top: 10px;
+}
+
+h3.spacer{
+    padding-bottom:5px;
+}
+
+div.schoolinfo{
+    padding-left:5px;
+    background-color:lavender;
+}
+
+h2.headertext{
+    color:white;
+    padding-left:10px;
+}
+
+.btn-details {
+    background: #c9c9c9;
+    color: #4d4d4d;
+    font-family: Consolas;
+    font-size: large;
+    border: solid #4d4d4d 1px;
+    margin-bottom: 10px;
+}
+
+.btn-details:hover {
+    background: #4d4d4d;
+    font-weight:500;
+    color:#c9c9c9;
+    border-color: #c9c9c9;
+}
+
+span.blink {   
+  animation-duration: 800ms;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+   0% {
+        opacity: 0;
+      }
+
+    49.99% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

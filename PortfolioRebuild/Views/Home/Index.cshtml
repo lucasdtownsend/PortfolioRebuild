@@ -1,0 +1,130 @@
+﻿@model IEnumerable<PortfolioRebuild.Models.Project>
+@{
+    ViewBag.Title = "Lucas D Townsend";
+}
+
+<title>Lucas D. Townsend</title>
+
+<div style="padding-top: 20px;"></div>
+
+<!--Main name header-->
+<div class="container-fluid" >
+    <h1 style="font-size:400%;">Lucas D. Townsend</h1>
+    <p style="padding-left:40px;">Software Design and Other Creative Endeavors</p>
+</div>
+
+<!--Anchor for projects section and div to compensate for navbar-->
+<a name="projects"></a>
+<div class="navspacer" />
+
+<!--Projects header-->
+<div class="row" style="background-color:#000000;">
+    <h2 class="headertext">Projects<span class="blink">_</span></h2>
+</div>
+
+<!--Loop through every row in the project database and create an entry for each one.-->
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <!--Header bar for each project. Name pulled from database.-->
+        <div class="row projectheader">
+            <h4 class="projectname">@Html.DisplayFor(modelItem => item.Name)</h4>
+        </div>
+
+        <!--Create and populate screenshot div for each project from database-->
+        <div class="row projectbody">
+            <div class="col-md-6">
+                <img src="~/@Html.DisplayFor(modelItem => item.Screenshot)" class="img-responsive screenshot" />
+            </div>
+            <!--Create and populate details div for each project from database-->
+            <div class="col-md-6" style="padding-top:10px;">
+                <p class="summary">@Html.DisplayFor(modelItem => item.Summary)</p>
+                <p class="summary">Made with @Html.DisplayFor(modelitem => item.Languages)</p>
+                <a href="@Html.DisplayFor(modelitem => item.GitHub)" target="_blank" class="btn btn-block btn-details">TAKE A LOOK</a>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 10px;"></div>
+
+    }
+}
+
+<!--Anchor point and div to compensate for navbar-->
+<a name="about"></a>
+<div class="navspacer" />
+
+<!--About section header-->
+<div class="row" style="background-color:#000000;">
+    <div class="container-fluid">
+        <h2 class="headertext">About<span class="blink">_</span></h2>
+    </div>
+</div>
+
+<!--Small empty space to make it look pretty-->
+<div class="row" style="padding-top: 10px; background-color:lavenderblush"></div>
+
+<div class="row border" style="background-color:lavenderblush;">
+    <!--Div for 'about' image-->
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+        <img src="~/assets/mcfly.png" class="img-responsive" />
+    </div>
+    <!--Div for bio, appears beside image-->
+    <div class="col-md-7">
+        <p style="margin:auto; padding-top:10px;">Usually seen covered in heavy-breathing pugs, Lucas has no choice but to make things. Seriously, he tried
+        doing other kinds of work and he couldn't do it even if he wanted to. Starting his undergrad in business, he only maintained his sanity
+        by writing and producing a sketch comedy podcast in his spare time. After earning a degree in audio production and discovering
+        the media industry was not for him, he made a weekly YouTube series about old video games to keep himself going through an exhausting
+        office job.</p><br />
+
+        <p>Our intrepid protagonist finally realized that writing software fulfilled his unrelenting need for creative work, and he was pretty good
+        at it. Not looking forward to starting his university career from scratch, he discovered coding bootcamp, a mystical and mysterious
+        land that offered exactly the kind of fast paced and comprehensive learning environment he had always dreamed of. His experience now includes <b>.NET Framework, Object Oriented Design, C#, ASP.NET, MVC, XAML, HTML, CSS, Python, Git, WPF, SQL and Javascript.</b>
+        <br /> <br />
+        All told, it worked out pretty well.
+        </p>
+    </div>
+</div>
+
+<a name="education"></a>
+<div class="navspacer"></div>
+
+<!--Header for Education section-->
+<div class="row" style="background-color:#000000;">
+    <div class="container-fluid">
+        <h2 class="headertext">Education<span class="blink">_</span></h2>
+    </div>
+</div>
+
+<!--Empty space to make it look nice-->
+<!--<div class="row" style="padding-top: 10px;"></div>-->
+
+<!--Row for WCCI logo-->
+<div class="row schoolcontainer border">
+    <img src="~/assets/WCCI.png" class="img-responsive school" alt="We Can Code IT" />
+</div>
+<!--WCCI details to appear below logo-->
+<div class="row schoolinfo border">
+    <h3>Coding Bootcamp</h3>
+    <h3 class="spacer">Cleveland, Ohio</h3>
+    <h4>Comprehensive .NET Framework Curriculum</h4>
+    <h4>2015</h4>
+</div>
+
+<!--Empty div for spacing-->
+<div style="padding-top: 10px;"></div>
+
+<!--Row for OU logo-->
+<div class="row schoolcontainer border">
+    <img src="~/assets/ohio.png" class="img-responsive school" alt="Ohio University" />
+</div>
+<!--OU details to appear below logo-->
+<div class="row schoolinfo border">
+    <h3>Scripps College of Communication</h3>
+    <h3 class="spacer">Athens, Ohio</h3>
+    <h4>Bachelor's Degree in Audio Post-Production for the Moving Image</h4>
+    <h4>2006 - 2011</h4>
+</div>
+
+<!--Anchor for navbar link and empty div to compensate for navbar-->
+<a name="contact"></a>

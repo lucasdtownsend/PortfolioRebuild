@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/jquery-1.3.2.min.js")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p>@Html.ActionLink("LDT", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</p>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li style="font-family:Consolas;"><a href="#projects">Projects</a></li>
+                    <li style="font-family:Consolas;"><a href="#about">About</a></li>
+                    <li style="font-family:Consolas;"><a href="#education">Education</a></li>
+                    <li style="font-family:Consolas;"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <!--Header for 'contact' section-->
+            <div class="row" style="background-color:#000000;">
+                <div class="container-fluid">
+                    <h2 class="headertext">Contact<span class="blink">_</span></h2>
+                </div>
+            </div>
+
+            <!--Row for social media links. Same color as header for one uninterrupted section.-->
+            <div class="row" style="background-color:#000000">
+                <a href="https://www.linkedin.com/in/lucas-d-townsend-91421232" title="LinkedIn" target="_blank"><img src="~/assets/social/64-linkedin.png" class="school" alt="LinkedIn" /></a>
+                <a href="https://github.com/lucasdtownsend" title="GitHub" target="_blank"><img src="~/assets/github.png" class="school" alt="GitHub" /></a>
+                <a href="https://twitter.com/seamusmcfly" title="Twitter" target="_blank"><img src="~/assets/social/64-twitter.png" class="school" alt="Twitter" /></a>
+                <a href="https://www.facebook.com/profile.php?id=12331980" title="Facebook" target="_blank"><img src="~/assets/social/64-facebook.png" class="school" alt="Facebook" /></a>
+                <a href="https://www.youtube.com/user/Bitrona" title="YouTube" target="_blank"><img src="~/assets/social/64-youtube.png" class="school" alt="YouTube" /></a>
+                <p style="padding-left:80%; color:white;">&copy; @DateTime.Now.Year - Lucas D. Townsend</p>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
